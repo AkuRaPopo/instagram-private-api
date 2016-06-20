@@ -4,12 +4,19 @@ INSTAGRAM PRIVATE NODE.JS API
 ![travis](https://travis-ci.org/huttarichard/instagram-private-api.svg)
 
 **Masalah**
+
+
 On June 1, 2016 Instagram changed the permissions and all apps moved automatically to Sandbox Mode if they were not approved through the review process.
 
 **Solusi**
+
+
 Restful api hasil dari reverse engineering aplikasi instagram.
 
 **Contoh**
+
+
+```javascript
 var Client = require('instagram-private-api').Client.V1;
 var device = new Client.Device('SAMSUNG_GALAXY_S2', 'username_bot_geje');
 var cookiePath = __dirname + '/gadispanas.json';
@@ -25,7 +32,7 @@ promise.then(function(sessionInstance) {
         console.log(accountInstance.id)
         console.log(accountInstance.params)
  });   
-
+```
 
 **Installation**
 
