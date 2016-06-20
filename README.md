@@ -3,15 +3,15 @@ INSTAGRAM PRIVATE NODE.JS API
 ![logo](https://cloud.githubusercontent.com/assets/1809268/15931032/2792427e-2e56-11e6-831e-ffab238cc4a2.png)
 ![travis](https://travis-ci.org/huttarichard/instagram-private-api.svg)
 
-**Masalah**
+**Problem**
 
 
 On June 1, 2016 Instagram changed the permissions and all apps moved automatically to Sandbox Mode if they were not approved through the review process.
 
-**Solusi**
+**Solution**
 
 
-Restful api hasil dari reverse engineering aplikasi instagram.
+reverse engineering instagram app to access the private api.
 
 **Contoh Pertama**
 
