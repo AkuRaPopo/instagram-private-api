@@ -13,7 +13,23 @@ On June 1, 2016 Instagram changed the permissions and all apps moved automatical
 
 Restful api hasil dari reverse engineering aplikasi instagram.
 
-**Contoh**
+**Contoh Pertama**
+
+
+```javascript
+var Client = require('instagram-private-api').Client.V1;
+var device = new Client.Device('SAMSUNG_GALAXY_S2', 'username_bot_geje');
+var cookiePath = __dirname + '/gadispanas.json';
+var session = new Client.Session(device, cookiePath);
+var promise = Client.Session.create(device, cookiePath, 'username_bot_geje', 'password_bot_geje');
+
+ Client.Account.search(session, 'ajudan_pribadi').then(function(accountInstance) {
+        console.log(accountInstance.id)
+        console.log(accountInstance.params)
+ });   
+```
+
+**Contoh Kedua**
 
 
 ```javascript
@@ -24,14 +40,12 @@ var session = new Client.Session(device, cookiePath);
 var promise = Client.Session.create(device, cookiePath, 'username_bot_geje', 'password_bot_geje');
 
 promise.then(function(sessionInstance) {
-   // console.log(sessionInstance);
-});
-
-
- Client.Account.search(session, 'ajudan_pribadi').then(function(accountInstance) {
+ console.log(sessionInstance);
+ Client.Account.search(sessionInstance, 'ajudan_pribadi').then(function(accountInstance) {
         console.log(accountInstance.id)
         console.log(accountInstance.params)
  });   
+});
 ```
 
 **Installation**
