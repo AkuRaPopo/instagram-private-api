@@ -3,9 +3,30 @@ INSTAGRAM PRIVATE NODE.JS API
 ![logo](https://cloud.githubusercontent.com/assets/1809268/15931032/2792427e-2e56-11e6-831e-ffab238cc4a2.png)
 ![travis](https://travis-ci.org/huttarichard/instagram-private-api.svg)
 
-===================
+**Masalah**
 On June 1, 2016 Instagram changed the permissions and all apps moved automatically to Sandbox Mode if they were not approved through the review process.
-===================
+
+**Solusi**
+Restful api hasil dari reverse engineering aplikasi instagram.
+
+**Contoh**
+var Client = require('instagram-private-api').Client.V1;
+var device = new Client.Device('SAMSUNG_GALAXY_S2', 'username_bot_geje');
+var cookiePath = __dirname + '/gadispanas.json';
+var session = new Client.Session(device, cookiePath);
+var promise = Client.Session.create(device, cookiePath, 'username_bot_geje', 'password_bot_geje');
+
+promise.then(function(sessionInstance) {
+   // console.log(sessionInstance);
+});
+
+
+ Client.Account.search(session, 'ajudan_pribadi').then(function(accountInstance) {
+        console.log(accountInstance.id)
+        console.log(accountInstance.params)
+ });   
+
+
 **Installation**
 
 
