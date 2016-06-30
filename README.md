@@ -18,12 +18,12 @@ reverse engineering instagram app to access the private api.
 
 ```javascript
 var Client = require('instagram-private-api').Client.V1;
-var device = new Client.Device('SAMSUNG_GALAXY_S2', 'username_bot_geje');
+var device = new Client.Device('SAMSUNG_GALAXY_S2', 'username_anda');
 var cookiePath = __dirname + '/gadis_seksi.json';
 var session = new Client.Session(device, cookiePath);
-var promise = Client.Session.create(device, cookiePath, 'username_bot_geje', 'password_bot_geje');
+var promise = Client.Session.create(device, cookiePath, 'username_anda', 'password_anda');
 
- Client.Account.search(session, 'a.ayual').then(function(accountInstance) {
+ Client.Account.search(session, 'username_yang_dicari').then(function(accountInstance) {
         console.log(accountInstance.id)
         console.log(accountInstance.params)
  });   
@@ -34,10 +34,10 @@ var promise = Client.Session.create(device, cookiePath, 'username_bot_geje', 'pa
 
 ```javascript
 var Client = require('instagram-private-api').Client.V1;
-var device = new Client.Device('SAMSUNG_GALAXY_S2', 'username_bot_geje');
-var cookiePath = __dirname + '/gadispanas.json';
+var device = new Client.Device('SAMSUNG_GALAXY_S2', 'username_anda');
+var cookiePath = __dirname + '/gadis_seksi.json';
 var session = new Client.Session(device, cookiePath);
-var promise = Client.Session.create(device, cookiePath, 'username_bot_geje', 'password_bot_geje');
+var promise = Client.Session.create(device, cookiePath, 'username_anda', 'password_anda');
 
 promise.then(function(sessionInstance) {
  console.log(sessionInstance);
